@@ -1,0 +1,32 @@
+Descargar Virtual box de la siguiente página
+https://www.virtualbox.org/
+Abrir el archivo de virtual box e instalar la aplicación
+Descargar ubuntu versión 26.04 de la siguiente página
+https://ubuntu.com/download/desktop
+Abrir Virtual box
+Dar clic en el icono que dice nuevo
+Darle un nombre a la maquina virtual 
+Dejar la carpeta de la maquina virtual por defecto 
+En Iso image aplicar el archivo Iso de ubuntu 
+En la siguiente sección dar un contraseña la cual te sea fácil de recordar 
+En lo siguiente dar una memoria base de 1000mb, 1CPU y un tamaño de disco de 25 gb
+Dar click a siguiente y esperar a la instalación de la maquina virtual 
+Darle click a Iniciar y esperar a que lo haga 
+
+Descargar Visual code Studio 
+Iniciar una sesión en Github 
+Crear un nuevo repositorio con las siguientes características:
+Nombre: LINUX1A
+Activar README
+No. gignate
+Licencia: GNU
+Abrir visual code estudio 
+Pica a la pestaña de la izquierda con lo que parece un mapa mental 
+Dar clic a instalar Git
+Instalar el archivo de git
+Volver a abrir visual Studio code 
+Volver a la misma pestaña de antes en donde ahora debería salir la opción de Clonar repositorio, hacer click y elegir el de LINUX1A
+Dentro del repositorio crear una carpeta llamada 01-practica
+Crear un archivo llamado guia.txt dentro de esa carpeta y en el archivo escribir las Instrucciones para hacer lo visto en clase 
+
+ 
