@@ -1,3 +1,4 @@
+Parte1
 Descargar Virtual box de la siguiente página
 https://www.virtualbox.org/
 Abrir el archivo de virtual box e instalar la aplicación
@@ -13,6 +14,7 @@ En lo siguiente dar una memoria base de 1000mb, 1CPU y un tamaño de disco de 25
 Dar click a siguiente y esperar a la instalación de la maquina virtual 
 Darle click a Iniciar y esperar a que lo haga 
 
+Parte2
 Descargar Visual code Studio 
 Iniciar una sesión en Github 
 Crear un nuevo repositorio con las siguientes características:
@@ -29,4 +31,5 @@ Volver a la misma pestaña de antes en donde ahora debería salir la opción de 
 Dentro del repositorio crear una carpeta llamada 01-practica
 Crear un archivo llamado guia.txt dentro de esa carpeta y en el archivo escribir las Instrucciones para hacer lo visto en clase 
 
- 
+ git config --global user.name "Flavio Medellin"
+ git config --global user.email "medellinflaviocesar@gmail.com"
