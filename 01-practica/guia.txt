@@ -31,5 +31,121 @@ Volver a la misma pestaña de antes en donde ahora debería salir la opción de 
 Dentro del repositorio crear una carpeta llamada 01-practica
 Crear un archivo llamado guia.txt dentro de esa carpeta y en el archivo escribir las Instrucciones para hacer lo visto en clase 
 
+Parte 3
+Guarar los cambios hechos de forma local
+Volver a abri la pestaña con forma de mapa mental
+
  git config --global user.name "Flavio Medellin"
  git config --global user.email "medellinflaviocesar@gmail.com"
+
+CREATE nombre_del_archivo
+UPDATE
+DELETE
+
+Hacer capturas por cada comando
+#mkdir01.png
+mkdir -p ~/laboratorio-cli/{docs,src,logs}
+ls
+#mkdir02.png
+cd ~/laboratorio-cli
+ls
+mkdir03.png
+touch docs/{guia, notas}.md src/{main, test}.py logs/app.log README.txt
+ls #mostrar el README.txt
+#mkdir04.png
+cd docs
+ls #mostrar los archivos de docs
+#mkdir05.png
+cd src
+ls #mostrar los archivos de src 
+#mkdir06.png 
+cd logs 
+ls #mostrar los archivos de logs 
+#mkdir07.png 
+printf ´error\nok\nerror\n´ > logs/app.log
+nano logs/app.log 
+ctrl s para guardar
+ctrl x para salir de nano
+
+#Día 4
+Meterse a la carpeta de laboratorio
+cd ~/laboratorio
+Ejecutar el siguiente comando
+ls -lah docs
+Muestra los permisos que se tienen en la carpeta seleccionada
+drwxrwxr-x
+
+r=4
+w=2
+x=1
+-=0
+
+A= Administradores
+G= Grupo de usuarios
+O= Otros
+
+Lo más recomendable es que l parte de otros
+solo tenga permisos de lectura.
+
+docs_ls_lah.jpeg
+Captura al usar el comdando ls -lah en docs
+
+pwd.jpeg
+pwd
+/home/usuario/laboratorio-cli
+Muestra la carpeta donde te encuentras
+
+ls_lah.jpeg
+ls -lah 
+
+docsypwd.jpeg
+cd docs && pwd
+Te mueve a la carpeta de docs y ejecua el comando pwd
+
+cd-.jpeg
+cd -
+Regresa a la carpeta en la que estuviste anteriormente
+
+cddiagonal.jpeg
+cd /
+Te manda al kermet
+ls
+
+cdvir.jpeg
+cd ~
+
+realpath.jpeg
+realpath
+/home/usuario
+Da los mismo que pwd
+
+srcpwd.jpeg
+cd ../src && pwd 
+cd laboratorio-cli/src && pwd
+
+typecd.jpeg
+type cd
+cd is a shell bultin
+
+helpcd.jpeg
+help cd 
+Muestar toda la informacón y parametros que se pueden hacer
+con cd 
+
+lshelp.jpeg
+ls --help
+Muestra un resmuen del comando ls 
+
+
+man ls
+Te manda a una pagina hecha en c que es un manual para el comando
+manls01.jpeg captura de la ejecución del comando 
+manls02.jpeg captura de la pagina
+
+
+info coreutils
+infocoreutils01.jpeg captura de la ejecución del comando 
+infocoreutils02.jpeg captura de la pagina
+
+apropos.jpeg
+apropos 'list directory'
