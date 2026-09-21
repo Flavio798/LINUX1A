@@ -197,3 +197,71 @@ ls -lah
 -r quitar permisos de lectura
 -w quitar permisos de escritura
 -x quitar permisos de ejecución
+
+clase 21/09/26
+
+01_saludo.jpeg
+touch saludo.sh 
+nano saludo.sh
+
+Dentro del nano va: 
+#!/bin/bash
+read -p "Cual es tu nombre? " nombre
+#echo "Cual es tu nombre" && read nombre 
+echo "Hola $nombre! Bienvenido a LINUX!"
+
+02_saludo.jpeg
+chmod +x saludo.sh
+./saludo.sh
+
+03_saludo.jpeg
+#!/bin/bash
+#read -p "Cual es tu nombre? " nombre
+echo "Cual es tu nombre?" && read nombre 
+echo "Hola $nombre! Bienvenido a LINUX!"
+
+04_saludo.jpeg
+./saludo.sh
+
+touch operaciones.sh
+nano operaciones.sh
+
+05_operaciones
+#!/bin/bash
+read -p "Ingresa un numero (Presiona enter para 10)" num1
+num1=${num1:-10}
+read -p "Ingresa un numero (Presiona enter para 20)" num2
+num2=${num2:-20}
+
+suma=$((num1 + num2))
+resta=$((num1 - num2))
+multiplicacion=$((num1 * num2))
+division=$((num1 / num2))
+residuo=$((num1 % num2))
+potencia=$((num1 ** num2))
+
+echo "El resultado de la suma es: $suma"
+echo "El resultado de la resta es: $resta"
+echo "El resultado de la multiplicacion es: $multiplicacion"
+echo "El resultado de la division es: $division"
+echo "El resultado de el residuo es: $residuo"
+echo "El resultado de la potencia es: $potencia"
+
+06_operaciones
+Ejecutar el script con los numeros 2 y 2
+
+07_area_perimetro
+Hacer un script que haga el area y el perimetro de
+un rectangulo
+read -p "Ingresa el ancho del rectangulo" an
+read -p "Ingresa la altura del rectangulo" al
+
+anp1=$((an * 2))
+alp2=$((al * 2))
+per=$((anp1 + alp2))
+area=$((al * an))
+
+echo "El perimetro de el rectangulo es: $per"
+echo "El area de el rectangulo es: $area"
+08_area_perimetro
+Ejecutar el script de area_perimetro.sh
