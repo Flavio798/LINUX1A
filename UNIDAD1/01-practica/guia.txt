@@ -265,3 +265,51 @@ echo "El perimetro de el rectangulo es: $per"
 echo "El area de el rectangulo es: $area"
 08_area_perimetro
 Ejecutar el script de area_perimetro.sh
+
+Miercoles 23/09/2026
+
+nano: listado.sh
+#!/bin/bash
+mostrar_ayuda() {
+    echo "Uso: $0 <directorio_origen>"
+    echo "Ejemplo: $0/home/usuario/documentos"
+}
+mostrar_ayuda
+
+Ejecutar el archivo 
+
+respaldar_archivos() {
+    local origen=$1
+    echo "Iniciando el procesamiento
+    en: $origen"
+    for archivo in "$origen"/*;do
+    if[ -f"$archivo" ]; then
+    case "${archivo##*.}" in
+    txt|md)
+    echo "[TEXTO]
+    Respaldando archivo de notas: $
+    (basename "$archivo")"
+    ;;
+    sh)
+    echo "[SCRIPT] 
+    Saltando archivo ejecutable: $(basename "$archivo")"
+    ;;
+    *)
+    echo "[OTROS] 
+    Respaldando archivo general: $(basename "$archivos")"
+    ;;
+    esac
+    fi
+    done
+}
+respaldar_archivos $1
+
+Crear tres archivos
+touch texto.txt
+touch markdown.md
+touch imagen.jpg
+
+./listado.sh .
+
+01_listado.jpg nano
+02_listado.jpg ejecución
