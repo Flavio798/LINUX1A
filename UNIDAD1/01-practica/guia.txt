@@ -313,3 +313,57 @@ touch imagen.jpg
 
 01_listado.jpg nano
 02_listado.jpg ejecución
+
+Lunes_28_09_2026
+Agregar esto en listado.sh
+
+if [ $# -ne 1 ]; then
+echo "Error: Se requiere exactamente 1
+argumento." >&2
+mostrar_ayuda
+exit 1
+fi
+
+DIRECTORIO_INPUT=$1
+if [!-d "$DIRECTORIO_INPUT"]; then
+echo "Error: El directorio '$DIRECTORIO_INPUT' no existe." >&2
+exit 2
+fi
+
+OPCION=""
+while [ "$OPCION" != "3" ]; do
+echo -e "MENU DE RESPALDO"
+echo "1. Analizar y respaldar archivos."
+echo "2. Mostrar ruta del directorio a procesar"
+echo "3. Salir."
+
+read -p "Ingrese una opcion [1-3]: "OPCION
+case "$OPCION" in
+1)
+clear
+respaldar_archivos "$DIRECTORIO_INPUT"
+;;
+2)
+clear
+echo "Directorio configurado: $(realpath "$DIRECTORIO_INPUT")"
+;;
+3)
+clear
+echo "Saliendo del script..."
+;;
+*)
+clear
+echo "Opcion invalida. Intente de nuevo."
+;;
+esac
+done
+exit 0
+
+01_listado.jpg
+Captura del nano con los comdandos para el MENU
+02_listado.jpg 
+Captura de la ejecución de la primera opcion
+03_listado.jpg 
+Captura de la ejecución de la segunda opcion
+04_listado.jpg
+Captura de la ejecución de la tercera opcion
