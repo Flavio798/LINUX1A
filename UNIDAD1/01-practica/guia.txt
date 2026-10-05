@@ -367,3 +367,45 @@ Captura de la ejecución de la primera opcion
 Captura de la ejecución de la segunda opcion
 04_listado.jpg
 Captura de la ejecución de la tercera opcion
+
+Lunes_05_10_2026
+touch instalar_lynis.sh
+nano instalar_lynis.sh
+
+#!/bin/bash
+
+if [ "$EUID" -ne 0 ]; then
+echo "Por favor, ejecuta este script como root (sudo)"
+exit 1
+fi
+
+echo "1. Actualizando los indices del sistema..."
+apt-get update -y
+
+echo "2. Instalando dependencias necesarias..."
+apt-get install -y apt-transport-https ca-certificates curl software-properties-common gnupg
+
+echo "3. Configurando el repositario oficial de Lynis..."
+curl -fsSL https://cisofy.com | gpg --dearmor -o /usr/share/keyrings/cisofy-archive-keyring.gpg
+
+echo "deb [arch=amd64 signed-by=usr/share/keyrings/cisofy-archive-keyring.gpg] https://cisofy.com stable main"
+
+echo "4. Instalando Lynis..."
+apt-get update -y
+apt-get install -y lynis
+
+echo "5. Creando configuracion personalizada..."
+AC_PROFILE="/etc/lynis/custom.prf"
+cat <<EOF > "$AC_PROFILE"
+EOF
+
+echo "6. Verificando instalacion..."
+lynis show version
+
+echo "7. Ejecutando analisis automatico de archivos y sistemas..."
+lynis audit system --quick --quiet
+
+echo "8."
+echo "PROCESO COMPLETADO"
+echo "El reporte completo se ha guardado en: /var/log/lynis.log"
+echo "El informe de hallazgos se encuentra en: /var/log/lynis-report.dat"
