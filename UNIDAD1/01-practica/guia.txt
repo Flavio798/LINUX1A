@@ -1868,4 +1868,14 @@ ejecutar con sudo./dns.sh
 contraseña
 Asegurarse de haber cambiado el Internet
 Poner nombre a la pagina
+Si la conexiones fallan hay que reiniciar la red
+APT -date update
+Se tienen que modificar los archivos que son htlm y demas
+El ultimo pso es
+Poner la ip de la maquina en nuestra 
+computadora en la opcion de asignacion de servidor dns
+Si la pagina sale al cambiar el dns entonces cumple
+con el primer punto
+
+01_dns.jpg
 
